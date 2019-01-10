@@ -93,7 +93,7 @@
             .feature {
               display: grid;
               grid-template-columns: 1fr 1fr 1fr;
-              margin: 0 250px;
+              margin: auto 250px;
               color: white;
               text-align: left;
               grid-column-gap: 20px;
@@ -112,6 +112,7 @@
             .popularPizzas {
                 background-color: red;
                 height: 45vh;
+                margin: 8rem auto;
             }
             .popularPizzasContainer {
                 margin: 5px 210px;
@@ -269,13 +270,13 @@
                 display: grid;
                 grid-template-rows: auto auto auto 1fr auto auto;
                 grid-row-gap: 1rem;
+                justify-items: center;
             }
             .testlmonialsImage {
                 width: 10rem;
                 height: 10rem;
                 border-radius: 50%;
                 background: red;   
-                margin: auto 50px;
             }
             .quote {
                 border: 1px solid red;
@@ -313,6 +314,75 @@
                 background: transparent;
                 outline: none;
             }
+
+            /* Mobile App */
+            .mobileApp {
+                margin: 10rem auto;
+                height: 90vh;
+                background: black;
+                color: white;
+            }
+            .appContainer {
+                margin: auto 210px;
+                padding-top: 8rem;
+                padding-bottom: 8rem;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-column-gap: 8rem;
+            }
+            .iphoneImage {
+                height: 60vh;
+                width: 20vw; ;
+                background-image: url('./iPhone6.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .appInfo {
+                display: grid;
+                grid-template-rows: repeat(5,auto);
+                padding-top: 3rem;
+            }
+            .appInfo > ul >li {
+                margin-left: -1.5rem;
+            } 
+            .appInfo > div > button {
+                background: goldenrod;
+                padding: 0.5rem 2rem;
+                font-weight: 600;
+            }
+
+            /* blog post */
+            .blogPost {
+                margin: 4rem 210px;
+                color: white;
+            }
+            #blogTitle {
+                font-size: 2.5rem;
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            .blogContainer  {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-column-gap: 2rem;
+            }
+            .blogContainer > div {
+                display: grid;
+                grid-template-rows: repeat(5,auto);
+                grid-row-gap: 2rem;
+            }
+            .blogContainer > div > img {
+                border: 2px solid red;
+                width: 20rem;
+                height: 13rem;
+            }
+            .blogContainer > div > button {
+                background:goldenrod;
+                width: 10rem;
+                border: 1px solid goldenrod;
+                padding: 1rem 1rem;
+            }
+
         </style>
     </head>
 
@@ -361,6 +431,7 @@
                     <p>Marinated Chicken Breast Fillets, Shallots, Roasted Capsicum, Caramelised Onions & Bocconcini on a Tomato base, topped with Peri-Peri sauce</p>
                     <button>ORDER NOW</button>
                 </div>
+                <div class="pizzaImage"></div>
             </div>
         </div>
 
@@ -485,6 +556,58 @@
             <div class="testimonialsButton">
                 <button>&lt- </button>
                 <button>-&gt</button>
+            </div>
+        </div>
+
+        <div class="mobileApp">
+            <div class="appContainer">
+                <div class="iphoneImage"></div>
+                <div class="appInfo">
+                    <h1 class="primaryFont">Get the newest version of our mobile app for your phone.</h1>
+                    <p>Do you have an iPhone, Android device or an web-enabled mobile? 
+                        Then it’s easier than ever to order hot and fresh pizza – no phone calls necessary! Mobile ordering lets
+                         you access all the best features in a format that’s tailored to the screen size of your mobile phone,
+                          find special online offers and order your favorite pizza and sides in a flash.</p>
+                    <h1 class="primaryFont">Here's why it's great:</h1>
+                    <ul>
+                        <li>It's free</li>
+                        <li>No registration required</li>
+                        <li>Order from the full menu</li>
+                        <li>Find local deals</li>
+                        <li>Pay directly from the app</li>
+                    </ul>
+                    <div>
+                        <button>download iPhone App</button>
+                        <button>download Android App</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blogPost">
+            <div class="primaryFont" id="blogTitle">Latest News & Recipes</div>
+            <div class="blogContainer">
+                <div>
+                    <img src="" alt="">
+                    <p>January 22, 2015 </p>
+                    <h1 class="primaryFont">Perfect Pizza Using Baking Steel Broiler Method</h1>
+                    <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+                    <button>READ MORE</button>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <p>December 18, 2014 </p>
+                    <h1 class="primaryFont">Green Onion and Burrata Cheese Pizza Recipe</h1>
+                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui.</p>
+                    <button>READ MORE</button>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <p>December 10, 2014 </p>
+                    <h1 class="primaryFont">Brussels Sprouts, Pepper and Bacon Hot Pizza Recipes</h1>
+                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui.</p>
+                    <button>READ MORE</button>
+                </div>
             </div>
         </div>
     </body>
