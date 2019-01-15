@@ -121,9 +121,7 @@
             }
            function addItem(item) {
                 const {name, price} = item.dataset;
-                console.log(`${item} added`);
                 const ulItem = document.querySelector('.summary');
-                const totalPrice = document.querySelector('.total')
                 const liItem = document.createElement('li');
                 liItem.dataset.name = name;
                 const nameSpan = document.createElement('span');
@@ -132,34 +130,19 @@
                 priceSpan.innerText = `$${price}`;
                 liItem.append(nameSpan, priceSpan);
                 ulItem.append(liItem);
-                totalFinal = add(totalFinal, price);
+                totalFinal = totalFinal + parseFloat(price);
            }
            function removeItem(item) {
                 const ulItem = document.querySelector('.summary');
-                console.log(`${item} removed`);
                 const {name, price} = item.dataset;
-                // ulItem.querySelector([`data-name = "${name}"`]).remove();
                 ulItem.querySelector(`[data-name="${name}"]`).remove();
-                totalFinal =sub(totalFinal,price);
+                totalFinal = totalFinal - parseFloat(price);
            }
            function totalFunc() {
             const total = document.querySelector('.total');
             total.dataset.total = totalFinal;
-            total.innerText = `Total: $${totalFinal}`;
+            total.innerText = `Total: $${totalFinal.toFixed(2)}`;
            }
-           function add(num1, num2) {
-                const num1Digits = (num1.toString().split('.')[1] || '').length;
-                const num2Digits = (num2.toString().split('.')[1] || '').length;
-                const baseNum = Math.pow(10, Math.max(num1Digits, num2Digits));
-                return (num1 * baseNum + num2 * baseNum) / baseNum;
-            }
-            function sub(num1,num2){   
-                const num1Digits = (num1.toString().split('.')[1] || '').length;
-                const num2Digits = (num2.toString().split('.')[1] || '').length;
-                const baseNum = Math.pow(10, Math.max(num1Digits, num2Digits)); 
-                n=(num1Digits>=num2Digits)?num1Digits:num2Digits; 
-                return ((num1 * baseNum - num2 * baseNum) / baseNum).toFixed(n);  
-            }  
         </script>
     </head>
     <body>
